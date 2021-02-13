@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v1docker build -f Dockerfile -t docker.io/docker push ***/my-docker-repo:main-f2a46c4
       with:
         java-version: 1.8
     - name: Build with Maven
@@ -26,7 +26,7 @@ jobs:
     - name: Build and push docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: docker push palanisriram/my-docker-repo
+        image: palanisriram/my-docker-repo
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
