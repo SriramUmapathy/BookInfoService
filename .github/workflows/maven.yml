@@ -35,6 +35,8 @@ jobs:
 
       # Setup gcloud CLI
       - uses: google-github-actions/setup-gcloud@v0.2.0
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         with:
           service_account_key: ${{ secrets.GKE_SA_KEY }}
           project_id: ${{ secrets.GKE_PROJECT }}
