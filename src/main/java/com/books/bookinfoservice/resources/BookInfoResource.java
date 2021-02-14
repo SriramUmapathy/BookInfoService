@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("info")
+//@RequestMapping("info")
 public class BookInfoResource {
-    @RequestMapping("/{bookId}")
-    public Book getBookInfo(@PathVariable("bookId") String bookId) {
-        return Book.builder().bookId(bookId).name("java development").build();
+    @RequestMapping("/")
+    public Book getBookInfo() {
+        return Book.builder().bookId("123bookId").name("java development").build();
     }
 }

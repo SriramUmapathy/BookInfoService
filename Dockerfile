@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-EXPOSE 8080
+EXPOSE 8089
 
 COPY ./target/github-actions-gke-0.0.1-SNAPSHOT.jar /usr/app/
 WORKDIR /usr/app
