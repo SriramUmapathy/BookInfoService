@@ -11,7 +11,7 @@ class BookInfoResourceTest {
     void getBookInfo() {
 
         BookInfoResource bookInfoResource = new BookInfoResource();
-        Book book = bookInfoResource.getBookInfo("123");
+        Book book = bookInfoResource.getBookInfo();
 
         assertEquals(book.getBookId(),"123");
         assertEquals(book.getName(),"java development");
