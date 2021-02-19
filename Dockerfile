@@ -1,8 +1,6 @@
-FROM openjdk:8-jre-alpine
-
+FROM openjdk:8
 EXPOSE 8089
-
-COPY ./target/github-actions-gke-0.0.1-SNAPSHOT.jar /usr/app/
+COPY ./target/book-info-0.0.1.jar /usr/app/
 WORKDIR /usr/app
 
-ENTRYPOINT ["java", "-jar", "github-actions-gke-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "book-info-0.0.1.jar"]
