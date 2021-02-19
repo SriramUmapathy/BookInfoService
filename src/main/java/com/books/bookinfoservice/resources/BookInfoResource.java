@@ -21,7 +21,6 @@ public class BookInfoResource {
     @RequestMapping("/{bookId}")
     public Book getBookInfo(@PathVariable("bookId") String bookId) {
         LOGGER.info(bookId);
-
         return Book.builder().bookId(bookId).name(instanceInfoService.retrieveInstanceInfo()).build();
     }
 }

@@ -13,10 +13,10 @@ public class BookInfoServiceApplication {
 		SpringApplication.run(BookInfoServiceApplication.class, args);
 	}
 
-	@Bean
+//	@Bean
 //	@LoadBalanced
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
+//	public RestTemplate getRestTemplate() {
+//		return new RestTemplate();
+//	}
 
 }
