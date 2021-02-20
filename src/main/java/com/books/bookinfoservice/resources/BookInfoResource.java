@@ -23,4 +23,10 @@ public class BookInfoResource {
         LOGGER.info(bookId);
         return Book.builder().bookId(bookId).name(instanceInfoService.retrieveInstanceInfo()).build();
     }
+
+    @RequestMapping("/invalid/{bookId}")
+    public Book getInvalidBookInfo(@PathVariable("bookId") String bookId) throws Exception {
+        LOGGER.info(bookId);
+        throw new Exception("Invalid booking exception");
+    }
 }
