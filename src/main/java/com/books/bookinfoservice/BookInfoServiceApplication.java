@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-//@EnableEurekaClient
 public class BookInfoServiceApplication {
 
 	public static void main(String[] args) {
@@ -17,12 +16,5 @@ public class BookInfoServiceApplication {
 	public Sampler defaultSampler() {
 		return Sampler.ALWAYS_SAMPLE;
 	}
-
-
-//	@Bean
-//	@LoadBalanced
-//	public RestTemplate getRestTemplate() {
-//		return new RestTemplate();
-//	}
 
 }
